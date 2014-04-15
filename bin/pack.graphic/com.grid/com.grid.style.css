@@ -1,0 +1,62 @@
+.graphic-grid{width: 100%;}
+
+.graphic-grid table{table-layout: fixed; border-collapse: collapse;}
+.graphic-grid table td, .graphic-grid table th{border: 1px solid #ccc;}
+.graphic-grid table th{cursor: default;}
+.graphic-grid table th.row-num, .graphic-grid table td.row-num{width: 40px; cursor: default;}
+.graphic-grid table td>div, .graphic-grid table th>div {width: 100%; height: 100%; padding: 3px 10px;}
+
+.graphic-grid .grid-caption{padding: 10px; border-top: 0; border-right: 0; border-left: 0;}
+.graphic-grid .grid-caption div.icon{margin-[i18n:_align]: 20px;}
+.graphic-grid .grid-caption div.icon.gxui-hover{}
+.graphic-grid .grid-caption div.icon.gxui-disabled{}
+.graphic-grid .grid-caption div.icon span.ui-icon{margin: 0;}
+.graphic-grid .grid-caption div.icon span.label {font-size: 90%; margin: 0;}
+
+
+.graphic-grid .grid-thead{}
+.graphic-grid .grid-thead thead tr th {border-bottom: 0 none; text-align: center;}
+
+.graphic-grid .grid-tbody {position: relative; overflow-y: auto;  overflow-x: auto; width: 100%;}
+.graphic-grid .grid-tbody thead{height: 0;}
+.graphic-grid .grid-tbody thead th {border-top: 0; border-bottom: 0; height: 0; padding: 0; margin: 0;}
+.graphic-grid .grid-tbody thead th * {display: none;}
+
+.graphic-grid .grid-preloader{display: none; position: absolute; width: 100%; height: 100%; }
+.graphic-grid .grid-preloader div.cover{width: 100%; height: 100%; position: relative;}
+.graphic-grid .grid-preloader div.text{position: absolute; top: 40%; left: 45%; padding: 10px 20px; border-color: #8c4600;}
+
+.graphic-grid .grid-status {padding: 5px 20px;}
+.graphic-grid .grid-status .caption{float: [i18n:align];}
+.graphic-grid .grid-status .total{float: [i18n:_align];}
+
+.graphic-grid span.currency {float: [i18n:_align];}
+
+.graphic-grid .grid-tbody td {text-align: center; padding: 0 10px;}
+.graphic-grid .grid-tbody td a{}
+.graphic-grid .grid-tbody td.money_cell,
+.graphic-grid .grid-tbody td.text_cell,
+.graphic-grid .grid-tbody td.float_cell{text-align: [i18n:align];}
+.graphic-grid .grid-tbody td.varchar_cell,
+.graphic-grid .grid-tbody td.password_cell,
+.graphic-grid .grid-tbody td.datetime_cell,
+.graphic-grid .grid-tbody td.static_cell{}
+.graphic-grid .grid-tbody td.boolean_cell,
+.graphic-grid .grid-tbody td.list_cell{padding: 0;}
+.graphic-grid .grid-tbody td.boolean_cell span.ui-icon{margin: 0 auto;}
+.graphic-grid .grid-tbody td input.date-value{display: none;}
+.graphic-grid .grid-tbody td select,
+.graphic-grid .grid-tbody td input{width: 100%; background: transparent; border: none; text-align: inherit;}
+
+
+.graphic-grid .gxui-error{display: none; position: absolute;}
+.graphic-grid .gxui-error .arrow{
+    border-bottom: 7px solid #FC9393; border-left: 7px solid transparent;
+    border-right: 7px solid transparent; position: absolute; right: 7px; top: -7px;
+}
+
+.graphic-grid td.with-icon{text-align: [i18n:align];}
+.graphic-grid td.with-icon img{display: inline; margin: 0 0 -0.3em;}
+
+
+

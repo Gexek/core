@@ -1,0 +1,25 @@
+<?php
+namespace Data;
+
+class Data extends \ServerSide{
+    const INTEGER = 0;
+    const STRING = 1;
+    const DOUBLE = 2;
+    const BOOLEAN = 3;
+}
+
+/*
+$__info__ = array(
+    'name' => 'Data',
+    'version' => '0.1.0',
+    'root' => dirname(__FILE__),
+    'classes' => array(
+        'ajax' => new AClass('ajax', 'Ajax Request Generator', 'Data.DB.SQL,SysUtils.Security'),
+        'dataset' => new AClass('dataset', '', 'Utils.JSON'),
+        'request' => new AClass('request', '', 'Utils.String;Utils.URL')
+    ),
+    'packages' => array(
+        'db' => new APackage('db', '')
+    )
+);*/
+?>

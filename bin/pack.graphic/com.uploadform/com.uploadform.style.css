@@ -1,0 +1,191 @@
+.uploadform { font-size: 100%; width: 100%; }
+.uploadform.hidden { display: none; }
+
+.uploadform fieldset.ui-widget-content {
+  clear: both; border: 1px solid #000000;
+  padding: 10px; margin: 0 0 0 0;
+}
+.uploadform.noborder fieldset{ border: 0; }
+
+.uploadform fieldset {
+  clear: both; font-size: 100%; border-color: #000000;
+  border-width: 1px 0 0 0; border-style: solid none none none;
+  padding: 10px; margin: 0 0 0 0;
+}
+
+.uploadform fieldset legend {
+  font-size: 130%; font-weight: normal;
+  color: #000000; margin: 0 0 0 0; padding: 2px 10px;
+}
+
+.uploadform fieldset.collapsable legend {cursor: pointer;}
+.uploadform fieldset.collapsable div.content {display: none;}
+
+.uploadform label { font-size: 100%; }
+
+.uploadform label u {font-style: normal; text-decoration: underline;}
+
+.uploadform textarea { overflow: auto; }
+
+.uploadform div.field-row {
+  clear: [i18n:align]; display: block; width: 100%;
+  zoom: 1; margin: 5px 0 0 0; padding: 1px 3px; *float: right;
+}
+
+.uploadform fieldset div.notes {
+  float: [i18n:_align]; width: 158px;
+  height: auto; margin: 0 0 10px 10px;
+  padding: 5px; border: 1px solid #666666;
+  font-size: 88%;
+}
+.uploadform fieldset div.notes {
+  float: [i18n:_align]; width: 158px;
+  height: auto; margin: 0 0 10px 10px;
+  padding: 5px; color: #666666; font-size: 88%;
+}
+.uploadform fieldset div.notes span.ui-icon {
+  float: [i18n:align]; margin-[i18n:_align]: 3px;
+}
+.uploadform fieldset div.notes h4 {
+  padding: 0 0 10px 0px; border-width: 0 0 1px 0; border-style: solid;
+  border-color: #E8A119; color: #000000; font-size: 110%;
+}
+
+.uploadform fieldset div.notes p {margin: 0em 0em 1.2em 0em; color: #666666;}
+.uploadform fieldset div.notes p.last { margin: 0em; }
+
+.uploadform div fieldset {
+  clear: none; border-width: 1px; border-style: solid; border-color: #666666;
+  margin: 0 0 0 144px; padding: 0 5px 5px 5px; width: 197px;
+}
+.uploadform div fieldset legend { font-size: 100%; padding: 0 3px 0 9px; }
+.uploadform div.required fieldset legend { font-weight: bold; }
+
+.uploadform div label {
+  display: block; float: [i18n:align]; width: 20%;
+  padding: 3px 5px; margin: 0 0 5px 0; text-align: [i18n:_align];
+}
+.uploadform div.optional label, .uploadform label.optional { font-weight: normal; }
+.uploadform div.required label, .uploadform label.required { font-weight: bold; }
+
+.uploadform div label.labelCheckbox, .uploadform div label.labelRadio {
+  float: none; display: block; width: 200px;
+  zoom: 1; padding: 0; margin: 0 0 5px 142px; text-align: [i18n:align];
+}
+.uploadform div fieldset label.labelCheckbox, .uploadform div fieldset label.labelRadio {
+  margin: 0 0 5px 0; width: 170px;
+}
+.uploadform div img { float: [i18n:align]; border: 1px solid #000000; margin: 0 0 5px 0; }
+
+.uploadform p.error {
+  background-color: #ff0000; background-image: url(/images/icon_error.gif);
+  background-repeat: no-repeat; background-position: 3px 3px; color: #ffffff;
+  padding: 3px 3px 5px 27px; border: 1px solid #000000; margin: auto 100px;
+}
+.uploadform div.error {
+  background-color: #ffffe1; background-image: url(/images/required_bg.gif);
+  background-repeat: no-repeat; background-position: top [i18n:align]; color: #666666;
+  border: 1px solid #ff0000;
+}
+.uploadform div.error p.error {
+  background-image: url(/images/icon_error.gif);
+  background-position: top [i18n:align]; background-color: transparent;
+  border-style: none; font-size: 88%;
+  font-weight: bold; margin: 0 0 0 118px;
+  width: 200px; color: #ff0000;
+}
+
+.uploadform div select, .uploadform div textarea {
+  width: 200px; padding: 1px 3px; margin: 0 0 0 0;
+}
+.uploadform div input.inputText, .uploadform div input.inputPassword {
+  width: 200px; padding: 1px 3px; margin: 0 0 0 0;
+}
+.uploadform div input.inputFile {width: 211px;}
+
+form div select.selectOne, .uploadform div select.selectMultiple {
+  width: 211px; padding: 1px 3px;
+}
+
+.uploadform div input.inputCheckbox, .uploadform div input.inputRadio, .uploadform input.inputCheckbox, .uploadform input.inputRadio {
+  display: inline; height: auto; width: auto;
+  background-color: transparent; border-width: 0;
+  padding: 0; margin: 0 0 0 140px;
+}
+
+.uploadform div.submit { width: 214px; padding: 0 0 0 146px; }
+
+.uploadform div.submit div {
+  display: inline; float: [i18n:align]; text-align: [i18n:align];
+  width: auto; padding: 0; margin: 0;
+}
+
+.uploadform div input.inputSubmit, .uploadform div input.inputButton, .uploadform input.inputSubmit, .uploadform input.inputButton {
+  background-color: #cccccc; color: #000000;
+  width: auto; padding: 0 6px; margin: 0;
+}
+
+.uploadform div.submit div input.inputSubmit, .uploadform div.submit div input.inputButton {
+  float: [i18n:_align]; margin: 0 0 0 5px;
+}
+
+.uploadform div small {
+  display: block; margin: 0 0 5px 142px;
+  padding: 1px 3px; font-size: 88%; zoom: 1;
+}
+
+.uploadform p.buttons { text-align: center; }
+.uploadform p.buttons input { margin: 0 5px;}
+
+/* form.import.css 
+.uploadform label img {
+  behavior: url(/behaviors/label_img.htc);
+}
+*/
+.uploadform fieldset legend {
+  line-height: 150%;
+}
+
+.uploadform input, .uploadform select, .uploadform textarea {
+  background-color: #ffffff;
+}
+
+.uploadform textarea.expanding {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+  
+.uploadform div label.labelCheckbox, .uploadform div label.labelRadio, .uploadform label.labelCheckbox, .uploadform label.labelRadio {
+  display: block; width: 190px; zoom: 1;
+  padding: 4px 0 0 18px; text-indent: -18px; line-height: 120%;
+}
+
+.uploadform div label.labelCheckbox input.inputCheckbox, .uploadform div label.labelRadio input.inputRadio, .uploadform label.labelCheckbox input.inputCheckbox, .uploadform label.labelRadio input.inputRadio {
+  margin: 0;
+}
+
+.uploadform div fieldset input.inputText, .uploadform div fieldset input.inputPassword, .uploadform div fieldset input.inputFile, .uploadform div fieldset textarea.inputTextarea {
+  width: 160px; margin: 0 0 0 18px; margin: expression(setCntr(), '0px 0 0 -124px');
+}
+
+.uploadform div label.compact {
+  display: inline; width: auto; padding: 4px 10px 0 0;
+  text-indent: 0; margin: 0 0 0 0;
+}
+
+.uploadform div.wide label { float: none; display: block; }
+.uploadform div label.wide { width: 348px; }
+
+.uploadform div.wide input.inputText, .uploadform div.wide input.inputPassword, .uploadform div.wide input.inputFile, .uploadform div.wide select, .uploadform div.wide textarea {
+  width: 344px; margin: 0;
+}
+
+.uploadform div.notes p, .uploadform div small { line-height: 125%;}
+.uploadform div.wide small { margin: 0 0 5px 0; }
+
+.uploadform a.add-new{
+  text-decoration: none; font-size: 1.2em;
+  cursor: pointer; font-weight: bold;
+}

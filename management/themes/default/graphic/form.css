@@ -1,0 +1,7 @@
+.graphic-form div.graphic-formsection div.fieldrow label.note{}
+.graphic-form div.graphic-formsection div.fieldrow label.note span{}
+.graphic-form div.graphic-formsection div.fieldrow label.note span a{}
+
+.graphic-form div.graphic-formsection .gxui-header .popup-handle{font: 11px Tahoma; margin: 5px 0 0; color: #fff;}
+
+.graphic-form div.graphic-formsection .gxui-grid .gxui-g20 .gxui-control[type=checkbox] input{display: block; margin-bottom: -5px;}

@@ -1,0 +1,24 @@
+.gxui-control[type=combo]{position: relative;}
+.gxui-control[type=combo] .popup{
+	background: #fff;
+	position: absolute; height: 200px !important;
+	left: 0; top: 100%; width: 100% !important;
+	display: none; padding: 0 !important;
+	right: 0; z-index: 2; min-width: 1px !important;
+}
+
+.gxui-control[type=combo] .popup .header { padding: 5px; margin: 0; list-style: none; clear: both; display: block; overflow: hidden;}
+.gxui-control[type=combo] .popup .header li{ float: [i18n:align]; padding-[i18n:_align]: 7px;}
+.gxui-control[type=combo] .popup .header li input{ background: transparent; margin-[i18n:_align]: 5px; }
+
+.gxui-control[type=combo] .popup ul.list {overflow: auto; padding: 0; margin: 0; list-style: none;}
+.gxui-control[type=combo] .popup ul.list li {font-size: 0.9em; margin: 0; display: block;  padding: 5px;}
+.gxui-control[type=combo] .popup ul.list li label{font-size: 1.1em; padding: 0; margin: 0; margin-[i18n:_align]: 5px;}
+
+.graphic-controls-combo, 
+.form div fieldset.graphic-controls-combo {padding: 0; display: block; overflow: hidden; margin: 0;}
+.graphic-controls-combo{position: relative; padding: 4px 3px 2px 25px;}
+.graphic-controls-combo select { display: none; }
+.graphic-controls-combo input.input{border: 0 none; background: transparent; cursor: default; width: 100%;}
+.graphic-controls-combo .handle{bottom: 0; left: 0; position: absolute; top: 0;}
+.graphic-controls-combo .handle:before{padding: 7px 3px 0;]}

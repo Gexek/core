@@ -1,0 +1,133 @@
+div.graphic-filetree > ul{display: block;}
+
+ul.graphic-filetree {display: none; text-align: left; direction: ltr; font-family: Tahoma; line-height: 18px; padding: 0px; margin: 0px; clear: both;}
+ul.graphic-filetree ul{margin-left: 14px;}
+
+ul.graphic-filetree li {list-style: none; padding: 0px; margin: 0px; white-space: nowrap; position: relative;}
+
+ul.graphic-filetree li .file{cursor: pointer;}
+ul.graphic-filetree li .file.gxui-hover{background: #EAEEF1;}
+ul.graphic-filetree li .file.gxui-selected{background: #FFFFCD;}
+ul.graphic-filetree li .file:before {display: block; background-repeat: no-repeat; background-position: center; content: "";}
+
+ul.graphic-filetree li.list .file{}
+ul.graphic-filetree li.list .file:before{width: 16px; height: 16px; float: left; background-image: url(images/list_icons.png);}
+
+
+ul.graphic-filetree li.thumbnail{float: left; text-align: center; padding: 5px; margin: 5px; width: 125px; white-space: normal; height: 125px; position: relative; overflow: hidden;}
+ul.graphic-filetree li.thumbnail .file:before{width: 64px; height: 64px; background-image: url(images/thumbnail_icons.png); margin: 0 auto 20px;}
+
+ul.graphic-filetree li.thumbnail.ext_img .file:before{display: none;}
+ul.graphic-filetree li.thumbnail.ext_img .file .image_thumb {height: 84px; width: 100%; background-repeat: no-repeat; background-position: center;}
+ul.graphic-filetree li.thumbnail.ext_img .file .image_thumb img {max-height: 100%; max-width: 100%;}
+
+ul.graphic-filetree li label {color: #333; padding: 0 0 0 5px; cursor: pointer; letter-spacing: 0;}
+ul.graphic-filetree li.thumbnail label{z-index: 5; width: 125px; padding: 0; position: absolute; top: 103px; left: 0; word-wrap: break-word;}
+ul.graphic-filetree li.thumbnail.gxui-hover,
+ul.graphic-filetree li.thumbnail.gxui-hover label{overflow: inherit; background: #EAEEF1;}
+ul.graphic-filetree li.thumbnail.gxui-selected,
+ul.graphic-filetree li.thumbnail.gxui-selected label{background: #FFFFCD;}
+
+/*.graphic-filetree li.ext_dir.wait > a { background: url(images/spinner.gif) left top no-repeat; }
+
+
+
+/* File Extensions*/
+ul.graphic-filetree li.ext_home.list>.file:before { background-position: -16px 0; }
+
+ul.graphic-filetree li.ext_dir.list>.file:before{ background-position: -32px 0; }
+ul.graphic-filetree li.ext_dir.list.expanded>.file:before{ background-position: -48px 0; }
+ul.graphic-filetree li.ext_dir.thumbnail>.file:before { background-position: -64px 0; }
+
+ul.graphic-filetree li.ext_3gp.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_3gp.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_asp.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_asp.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_aspx.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_aspx.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_avi.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_avi.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_bat.list>.file:before { background-position: -64px -32px; }
+ul.graphic-filetree li.ext_bat.thumbnail>.file:before { background-position: -576px -128px; }
+ul.graphic-filetree li.ext_bz2.list>.file:before { background-position: -64px -16px; }
+ul.graphic-filetree li.ext_bz2.thumbnail>.file:before { background-position: -192px -128px; }
+ul.graphic-filetree li.ext_cgi.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_cgi.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_css.list>.file:before { background-position: -32px -32px; }
+ul.graphic-filetree li.ext_css.thumbnail>.file:before { background-position: -448px -128px; }
+ul.graphic-filetree li.ext_doc.list>.file:before,
+ul.graphic-filetree li.ext_docx.list>.file:before{ background-position: -128px -16px; }
+ul.graphic-filetree li.ext_doc.thumbnail>.file:before,
+ul.graphic-filetree li.ext_docx.thumbnail>.file:before{ background-position: -256px 0; }
+ul.graphic-filetree li.ext_exe.list>.file:before { background-position: -112px -16px; }
+ul.graphic-filetree li.ext_exe.thumbnail>.file:before { background-position: -320px -128px; }
+ul.graphic-filetree li.ext_gz.list>.file:before { background-position: -64px -16px; }
+ul.graphic-filetree li.ext_gz.thumbnail>.file:before { background-position: 128px -128px; }
+ul.graphic-filetree li.ext_htm.list>.file:before,
+ul.graphic-filetree li.ext_html.list>.file:before { background-position: -48px -16px; }
+ul.graphic-filetree li.ext_htm.thumbnail>.file:before,
+ul.graphic-filetree li.ext_html.thumbnail>.file:before { background-position: -448px -64px; }
+ul.graphic-filetree li.ext_img.list>.file:before { background-position: -128px 0; }
+ul.graphic-filetree li.ext_jar.list>.file:before { background-position: -32px -16px; }
+ul.graphic-filetree li.ext_jar.thumbnail>.file:before { background-position: -384px -64px; }
+ul.graphic-filetree li.ext_js.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_js.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_lasso.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_lasso.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_log.list>.file:before { background-position: -64px 0; }
+ul.graphic-filetree li.ext_log.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_m4p.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_mov.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_mov.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_mp3.list>.file:before { background-position: 0 -16px; }
+ul.graphic-filetree li.ext_mp3.thumbnail>.file:before{ background-position: -512px 0; }
+ul.graphic-filetree li.ext_mp4.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_mp4.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_mpg.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_mpg.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_mpeg.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_mpeg.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_ogg.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_ogg.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_pdf.list>.file:before { background-position: -48px -32px; }
+ul.graphic-filetree li.ext_pdf.thumbnail>.file:before { background-position: -576px -64px; }
+ul.graphic-filetree li.ext_php.list>.file:before { background-position: -144px 0; }
+ul.graphic-filetree li.ext_php.thumbnail>.file:before { background-position: -64px -64px; }
+ul.graphic-filetree li.ext_ppt.list>.file:before,
+ul.graphic-filetree li.ext_pptx.list>.file:before{ background-position: -80px -32px; }
+ul.graphic-filetree li.ext_ppt.thumbnail>.file:before,
+ul.graphic-filetree li.ext_pptx.thumbnail>.file:before{ background-position: -384px 0; }
+ul.graphic-filetree li.ext_psd.list>.file:before { background-position: -96px 0; }
+ul.graphic-filetree li.ext_psd.thumbnail>.file:before { background-position: -512px -64px; }
+ul.graphic-filetree li.ext_pl.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_pl.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_py.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_py.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_rar.list>.file:before { background-position: -128px -32px; }
+ul.graphic-filetree li.ext_rar.thumbnail>.file:before { background-position: -64px -128px; }
+ul.graphic-filetree li.ext_rhtml.list>.file:before { background-position: -48px -16px; }
+ul.graphic-filetree li.ext_rhtml.thumbnail>.file:before { background-position: -448px -64px; }
+ul.graphic-filetree li.ext_ruby.list>.file:before { background-position: -80px 0; }
+ul.graphic-filetree li.ext_ruby.thumbnail>.file:before { background-position: -256px -64px; }
+ul.graphic-filetree li.ext_sql.list>.file:before { background-position: -96px -32px; }
+ul.graphic-filetree li.ext_sql.thumbnail>.file:before { background-position: -384px -128px; }
+ul.graphic-filetree li.ext_swf.list>.file:before { background-position: -112px -32px; }
+ul.graphic-filetree li.ext_swf.thumbnail>.file:before{ background-position: -576px 0; }
+ul.graphic-filetree li.ext_txt.list>.file:before { background-position: -64px 0; }
+ul.graphic-filetree li.ext_txt.thumbnail>.file:before { background-position: -128px 0; }
+ul.graphic-filetree li.ext_vb.list>.file:before { background-position: -80px -16px; }
+ul.graphic-filetree li.ext_vb.thumbnail>.file:before { background-position: -128px -64px; }
+ul.graphic-filetree li.ext_wav.list>.file:before,
+ul.graphic-filetree li.ext_wave.list>.file:before{ background-position: 0 -16px; }
+ul.graphic-filetree li.ext_wav.thumbnail>.file:before,
+ul.graphic-filetree li.ext_wave.thumbnail>.file:before{ background-position: -512px 0; }
+ul.graphic-filetree li.ext_wmv.list>.file:before { background-position: -96px -16px; }
+ul.graphic-filetree li.ext_wmv.thumbnail>.file:before{ background-position: -448px 0; }
+ul.graphic-filetree li.ext_xls.list>.file:before,
+ul.graphic-filetree li.ext_xlsx.list>.file:before { background-position: -144px -16px; }
+ul.graphic-filetree li.ext_xls.thumbnail>.file:before,
+ul.graphic-filetree li.ext_xlsx.thumbnail>.file:before{ background-position: -320px 0; }
+ul.graphic-filetree li.ext_xml.list>.file:before { background-position: -32px -32px; }
+ul.graphic-filetree li.ext_xml.thumbnail>.file:before { background-position: -512px -128px; }
+ul.graphic-filetree li.ext_zip.list>.file:before { background-position: -64px -16px; }
+ul.graphic-filetree li.ext_zip.thumbnail>.file:before { background-position: 0 -128px; }

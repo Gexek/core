@@ -1,0 +1,16 @@
+RewriteEngine On
+AcceptPathInfo On
+
+AddType text/x-component .htc
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !(.*)\.([a-zA-Z0-9]{2,4})$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]
+
+RewriteRule (.*)\.(jpe?g|gif|png)$ ?driver=static&path=$1.$2 [L]
+
+RewriteRule ^(.*)/$ ? [L]

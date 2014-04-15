@@ -1,0 +1,17 @@
+.graphic-treeview, .graphic-treeview ul{list-style: none;}
+.graphic-treeview li{cursor: default;}
+
+.graphic-treeview li table{width: 100%; border-spacing: 0; table-layout: fixed;}
+.graphic-treeview li table td{vertical-align: middle; padding: 5px 0;}
+
+.graphic-treeview li table td.icon{width: 20px;}
+.graphic-treeview li table td.checkbox{width: 25px; text-align: center;}
+.graphic-treeview li table td.content{padding-[i18n:_align]: 10px;}
+.graphic-treeview li table td.movement{width: 20px;}
+
+.graphic-treeview li.closed > ul{display: none;}
+.graphic-treeview li.blank{display: none;}
+
+.graphic-treeview li .ui-icon{margin: 0 auto;}
+.graphic-treeview li .ui-icon.move,
+.graphic-treeview li .ui-icon.handle{cursor: pointer;}

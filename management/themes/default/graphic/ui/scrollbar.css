@@ -1,0 +1,3 @@
+/*paddings and margins should set to zero*/
+.scroll-y-bar{width: 20px; height: 100%; padding: 0; margin: 0;}
+.scroll-y-bar .handle{background: #ccc; width: 10px; border-radius: 5px; right: 5px; cursor: pointer;}

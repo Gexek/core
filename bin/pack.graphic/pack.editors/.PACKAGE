@@ -1,0 +1,9 @@
+<?php
+namespace Graphic;
+
+abstract class Editor extends Controls\Control{
+    static public $depends = array(
+        //'Graphic\UI\jQueryUI\Mouse'
+    );
+}
+?>

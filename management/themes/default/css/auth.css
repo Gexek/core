@@ -1,0 +1,19 @@
+.gxali{display: block; background-image: url("images/login/images.png"); background-repeat: no-repeat;}
+
+#gxal {width: 100%; height: 100%;}
+#gxal form{
+    width: 360px; padding: 0 20px; text-align: right; background: #363f47; border: 1px solid #687a8a;
+    -moz-box-shadow: -1px 2px 6px #000000; -webkit-box-shadow: -2px 2px 6px #000000; box-shadow: -1px 2px 10px #000000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=210, Color='#000000')"; /* For IE 8 */
+}
+#gxal form p.login-to>span{width: 24px; height: 24px; background-position: -50px 0; float: right; margin-left: 5px;}
+
+h3{text-align: center; padding: 10px 0;}
+
+p.gx-logo {
+    padding: 10px; text-align: left; font: Bold 30px Verdana; margin: 0; text-shadow: 2px 2px #333; position: relative;
+    background: transparent url("images/login/gexek.png") right center no-repeat; border-bottom: 1px solid #fff;
+}
+p.gx-logo>span.gxali{width: 50px; height: 50px; background-position: 0 0; position: absolute; right: 0; top: 4px;}
+p.gx-logo span.c {color: #22aedf; font: Bold 30px Verdana;}
+p.gx-logo sup.v {color: #fff; padding: 4px;}

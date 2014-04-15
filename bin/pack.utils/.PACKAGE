@@ -1,0 +1,55 @@
+<?php
+namespace Utils;
+
+class Utility extends \ServerSide {}
+class CustomString extends Utility{
+    protected $text = null;
+    private $nlChars = array("\r", "\n", "\r\n", "\n\r");
+    
+    public function __construct($text){
+        parent::__construct();
+        $this->text = $text;
+    }
+    
+    final public function inline(){
+        foreach($this->nlChars as $char)
+            $this->text = str_replace($char, '', $this->text);
+        return $this->__toString();
+    }
+
+    public static function wrap($text, $wrapper){
+        return "$wrapper$text$wrapper";
+    }
+    
+    public function __toString(){
+        //$this->initTags();
+        return $this->text;
+    }
+    
+    public function text(){
+        return $this->__toString();
+    }
+}
+/*
+$__info__ = array(
+    'name' => 'Utils',
+    'version' => '0.1.0',
+    'root' => dirname(__FILE__),
+    'classes' => array(
+        'string'=>new AClass('string', '', 'Utils.RegExp'),
+        'json'=>new AClass('json', ''),
+        'cryptor'=>new AClass('cryptor', ''),
+        'hash'=>new AClass('hash', ''),
+        'regexp'=>new AClass('regexp', ''),
+        'url'=>new AClass('url', ''),
+        'file'=>new AClass('file', ''),
+        'jsmin'=>new AClass('jsmin', 'Javascript minifier'),
+        'cssmin'=>new AClass('cssmin', 'Stylesheets minifier'),
+        'template'=>new AClass('template', 'Template Engine'),
+        'jshelper'=>new AClass('jshelper', 'Javascript Helper'),
+        'image'=>new AClass('image', 'Image editing class'),
+        'mail'=>new AClass('mail', 'Mail utility')
+    ),
+    'packages' => array()
+);*/
+?>

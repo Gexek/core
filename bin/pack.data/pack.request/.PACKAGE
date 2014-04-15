@@ -1,0 +1,48 @@
+<?php
+namespace Data\Request;
+
+class RequestObject {
+    protected $items;
+    protected $cast = array('null' => null, 'true' => true, 'false' => false); 
+    public $default = null;
+    
+    public function __construct($source){
+        $this->import($source);
+    }
+    
+    private function isJson($string) {
+        return !empty($string) && is_string($string) && preg_match('/^([\[{]{1})(.*)([\]}]{1})$/i',$string);
+    }
+
+    protected function import($source){
+        foreach($source as $key => $src){
+            if(is_string($src)){
+                if(get_magic_quotes_gpc())
+                    $src = stripslashes($src);
+                    
+                if(in_array($src, array_keys($this->cast))) 
+                	$src = $this->cast[$src];
+                else {
+                    if($this->isJson(urldecode($src)))
+                        $src = json_decode(urldecode($src));
+                }
+            }
+            $this->items[$key] = $src;
+        }
+    }
+    
+    public function __get($var){
+        switch($var){
+            case 'count': return count($this->items); break;
+            default: return isset($this->items[$var])? $this->items[$var]: false; break;
+        }
+    }
+    public function __isset($var){
+        return isset($this->items[$var]);
+    }
+
+    public function exists($key){
+        return isset($this->items[$var]);
+    }
+}
+?>

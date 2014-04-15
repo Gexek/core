@@ -1,0 +1,4 @@
+.graphic-form .gxui-control span{color: #888;}
+.graphic-form .gxui-control>textarea.graphic-ui-controls-textarea,
+.graphic-form .gxui-control>input.graphic-ui-controls-textbox,
+.graphic-form .gxui-control>input.graphic-ui-controls-combobox{margin: 0 3px; padding: 2px 5px;}

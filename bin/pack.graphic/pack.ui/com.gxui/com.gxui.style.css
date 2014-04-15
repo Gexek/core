@@ -1,0 +1,216 @@
+/* (en) Global reset of paddings and margins for all HTML elements */
+* {
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
+    *behavior: url("bin/pack.graphic/pack.ui/com.gxui/boxsizing.htc");
+
+}
+
+/* (en) Correction:margin/padding reset caused too small select boxes. */
+option { padding-[i18n:align]: 0.4em; } /* Dynamic */
+select { padding:1px; }
+
+/**
+* (en) Global fix of the Italics bugs in IE 5.x and IE 6
+*
+* @bugfix
+* @affected   IE 5.x/Win, IE6
+* @css-for    IE 5.x/Win, IE6
+* @valid      yes
+*/
+html, body{min-height: 100%;}
+* html body * { overflow: visible; }
+body {
+    /* (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser */
+    font-size: 100%;
+    /* (en) Standard values for colors and text alignment */
+    background: #fff; color: #000;
+    text-align: [i18n:align]; /* Dynamic */
+    padding: 0; margin: 0;
+}
+/* (en) reset font size for all elements to standard (16 Pixel) */
+html * { font-size: 100%; }
+
+/* (en) avoid visible outlines on DIV containers in Webkit browsers */
+div:target { outline: 0 none; }
+
+/* (en) HTML 5 - adjusting visual formatting model to block level */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section { display: block; }
+
+/* (en) HTML5 - default media element styles */
+audio, canvas, video { display: inline-block; }
+
+/* (en) HTML5 - don't show <audio> element if there aren't controls */
+audio:not([controls]) { display: none; }
+
+/* (en) HTML5 - add missing styling in IE & old FF for hidden attribute  */
+[hidden] { display: none; }
+
+/* (en) force consistant appearance of input[type="search"] elements in all browser  */
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* (en) Clear borders for <fieldset> and <img> elements */
+fieldset, img { border: 0 solid; }
+
+/* (en) new standard values for lists, blockquote, cite and tables */
+ul, ol, dl { margin: 0 0 1em 0; margin-[i18n:align]: 1em; } /* Dynamic */
+li {line-height: 1.5em; margin-[i18n:align]: 0.8em; } /* Dynamic */
+
+dt { font-weight: bold; }
+dd { margin: 0 0 1em 0; margin-[i18n:align]: 0.8em; } /* Dynamic */
+
+blockquote { margin:0 0 1em 0; margin-[i18n:align]: 0.8em; } /* Dynamic */
+q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content:none }
+
+
+table {width: 100%; }
+table, thead, tbody, tfoot, tr, th, td {vertical-align: top;}
+
+/* General text formatting */
+p { font-size: 1em; margin: 1.5em 0 0 0;}
+blockquote, cite, q {font-family: Georgia, "Times New Roman", Times, serif; font-style: italic;}
+blockquote {margin: 1.5em 0 0 1.5em;}
+strong, b, .gxui-bold { font-weight: bold; }
+em, i { font-style: italic; }
+big {font-size: 116.667%;}
+small {font-size: 85.71%;}
+pre, code, kbd, tt, samp, var {font-size: 100%;}
+pre {line-height: 1.5em; margin: 1.5em 0 0 0; white-space: pre; white-space: pre-wrap; word-wrap: break-word; direction: ltr; text-align: left;}
+kbd, samp, var, tt { font-weight: bold; }
+var, dfn { font-style: italic; }
+acronym, abbr { border-bottom: 1px #aaa dotted; font-variant: small-caps; letter-spacing: 0.07em; cursor: help;}
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+mark { color: #000; }
+hr { color:#fff; background: transparent; margin: 0 0 0.75em 0; padding: 0 0 0.2em; border:0; border-bottom: 1px #eee solid; }
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold; margin: 0; line-height: 1.3em;}
+h4, h5, h6{font-weight: normal;}
+h1 {font-size: 240%; margin: 0.4286em 0 0; line-height: 1.76em;}
+h2 {font-size: 190%; margin: 0.3em 0 0;    line-height: 1.7em;}
+h3 {font-size: 155%; margin: 0.4em 0 0;    line-height: 1.6em;}
+h4 {font-size: 130%; margin: 0.4em 0 0;    line-height: 1.6em;}
+h5 {font-size: 110%; margin: 0.3em 0 0;    line-height: 1.5em;}
+h6 {font-size: 100%; margin: 0.3em 0 0;}
+
+/* Reset headlines margin when are first-child in their parent element */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child{margin: 0;}
+
+/* Reset paragraph margin when are first-child in their parent element */
+p:first-child{margin: 0;}
+
+/* (en) reset monospaced elements to font size 16px in all browsers */
+textarea, pre, code, kbd, samp, var, tt { font-family: inherit;	}
+
+.gxui-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+
+/* GXUI visuality classes */
+.gxui-hover{}
+.gxui-down{}
+.gxui-selected{}
+.gxui-light{}
+.gxui-dark{}
+.gxui-hidden{display: none;}
+.gxui-bordered{margin: 1.5em 0.3em 0.3em;}
+.gxui-border{border: 1px solid #000;}
+.gxui-border-all, .gxui-border-top, .gxui-border-tb, .gxui-border-blt, .gxui-border-ltr, .gxui-border-tlb
+{border-top-width: 1px;border-right-width: 0 !important;border-bottom-width: 0 !important;border-left-width: 0 !important;}
+.gxui-border-all, .gxui-border-right, .gxui-border-rl, .gxui-border-rbl, .gxui-border-ltr, .gxui-border-tlb
+{border-top-width: 0 !important;border-right-width: 1px;border-bottom-width: 0 !important;border-left-width: 0 !important;}
+.gxui-border-all, .gxui-border-bottom, .gxui-border-tb, .gxui-border-rbl, .gxui-border-blt, .gxui-border-tlb
+{border-top-width: 0 !important;border-right-width: 0 !important;border-bottom-width: 1px;border-left-width: 0 !important;}
+.gxui-border-all, .gxui-border-left, .gxui-border-rl, .gxui-border-rbl, .gxui-border-blt, .gxui-border-ltr
+{border-top-width: 0 !important;border-right-width: 0 !important;border-bottom-width: 0 !important;border-left-width: 1px;}
+
+/*Deprecated! use .gxui-iblock instead*/
+.gxui-inline-block{display: -moz-inline-stack !important; display: inline-block !important; zoom:1; *display: inline;}
+/* Cross browser inline block style */
+.gxui-iblock{display: -moz-inline-stack !important; display: inline-block !important; zoom:1; *display: inline;}
+
+/* foreced directional texts with inline block display */
+.gxui-rtl-text{direction: rtl; display: -moz-inline-stack !important; display: inline-block !important; zoom:1; *display: inline;}
+.gxui-ltr-text{direction: ltr; display: -moz-inline-stack !important; display: inline-block !important; zoom:1; *display: inline;}
+
+
+/* (en) clearfix method for clearing floats */
+/* required comment for clearfix to work in Opera \*/
+.gxui-clearfix:before,
+.gxui-clearfix:after {content: " "; /* 1 */ display: table; /* 2 */}
+.gxui-clearfix:after {clear: both;}
+/* For IE 6/7 only, Include this rule to trigger hasLayout and contain floats. */
+.gxui-clearfix {*zoom: 1;}
+
+.gxui-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+.gxui-float{float: [i18n:align] !important; display: inline; margin: 1.5em 0 0; margin-[i18n:align]: em;}
+.gxui-float-right{float: right !important; display: inline; margin: 1.5em 1em 0 0;}
+.gxui-float-left{float: left !important; display: inline; margin: 1.5em 0 0 1em;}
+
+.gxui-overlay{position: absolute; top: 0; left: 0; display: none; z-index: 500; height: 100%; width: 100%;}
+
+.gxui-spinner-fix{font-size: 0;}
+.gxui-spinner-fix .gxui-spinner{margin: 0 10px -7px}
+
+.gxui-popup{display: none; position: absolute; margin: 0;}
+.gxui-popup .arrow{position: absolute;}
+
+.gxui-highlight{padding: 10px; font-style: normal;}
+.gxui-highlight a{}
+.gxui-highlight.gxui-border{}
+
+.gxui-error{padding: 4px; font-style: normal; text-align: center;}
+.gxui-error a{}
+.gxui-error.gxui-border{}
+
+.gxui-disabled {cursor: default !important; opacity: 0.5; filter: alpha(opacity=50);}
+
+/* Corner radius */
+.gxui-corner, .gxui-corner-top, .gxui-corner-left, .gxui-corner-top-left { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.gxui-corner, .gxui-corner-top, .gxui-corner-right, .gxui-corner-top-right { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.gxui-corner, .gxui-corner-bottom, .gxui-corner-left, .gxui-corner-bottom-left { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.gxui-corner, .gxui-corner-bottom, .gxui-corner-right, .gxui-corner-bottom-right { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+/* Panels */
+.gxui-panel{padding: 1px;}
+.gxui-panel.outer{border-width: 1px;}
+.gxui-panel.inner{border-width: 0; border-bottom-width: 1px;}
+.gxui-panel.gxui-float-right{}
+.gxui-panel.gxui-float-right{}
+
+/* Grids */
+.gxui-grid {display: table; list-style-type: none; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; table-layout: fixed; width: 100%;}
+.gxui-g20 { width:20%; } .gxui-g30 { width:30%; } .gxui-g40 { width:40%; }
+.gxui-g80 { width:80%; } .gxui-g70 { width:70%; } .gxui-g60 { width:60%; } 
+.gxui-g25 { width:25%; } .gxui-g33 { width:33.333%; } .gxui-g50 { width:50%; }
+.gxui-g66 { width:66.666%; } .gxui-g75 { width:75%; } .gxui-g38 { width:38.2%; }
+.gxui-g62 { width:61.8%; } .gxui-g100 { width:100%; }
+.gxui-gbox { padding: 0 10px }
+.gxui-gbox-left { padding: 0 10px 0 0 }
+.gxui-gbox-right { padding: 0 0 0 10px }
+.gxui-equalize { overflow:hidden; }
+.gxui-equalize > [class*="gxui-g"] { display: table-cell; float: none; margin: 0; vertical-align: top; }
+.gxui-equalize > [class*="gxui-g"] > [class*="gxui-gbox"] { padding-bottom: 10000px; margin-bottom: -10000px }
+
+/* Buttons */
+.gxui-button{padding: 2px 7px; margin: 1px;}
+
+.gxui-gradient{
+    background-image: -moz-linear-gradient(
+        top,
+        rgba(255,255,255,0.4) 0%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.1) 51%,
+        rgba(255,255,255,0.0) 100%);
+    background-image: -webkit-gradient(
+        linear, left top, left bottom,
+        color-stop(0%,rgba(255,255,255,0.4)),
+        color-stop(50%,rgba(255,255,255,0.2)),
+        color-stop(51%,rgba(255,255,255,0.1)),
+        color-stop(100%,rgba(255,255,255,0.0)));
+}
+
+
+
+

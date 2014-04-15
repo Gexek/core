@@ -1,0 +1,25 @@
+.gxui-control[type=pagecombo]{position: relative;}
+.gxui-control[type=pagecombo] .popup{
+	background: #fff;
+	position: absolute; height: 200px !important;
+	left: 0; top: 100%; width: 100% !important;
+	display: none; padding: 0 !important;
+	right: 0; z-index: 2; min-width: 1px !important;
+}
+
+.gxui-control[type=pagecombo] .popup .header { padding: 5px; margin: 0; list-style: none; clear: both; display: block; overflow: hidden;}
+.gxui-control[type=pagecombo] .popup .header li{ float: [i18n:align]; padding-[i18n:_align]: 7px;}
+.gxui-control[type=pagecombo] .popup .header li input{ background: transparent; margin-[i18n:_align]: 5px; }
+
+.gxui-control[type=pagecombo] .popup ul.list {overflow: auto; padding: 0; margin: 0; list-style: none;}
+.gxui-control[type=pagecombo] .popup ul.list li {overflow: hidden; font-size: 0.9em; margin: 0; display: block;  padding: 5px;}
+.gxui-control[type=pagecombo] .popup ul.list li label{float: right; width: auto; font-size: 1.1em; padding: 0; margin: 0; margin-[i18n:_align]: 5px;}
+.gxui-control[type=pagecombo] .popup ul.list li span{float: left; direction: ltr;}
+
+.graphic-controls-pagecombo, 
+.form div fieldset.graphic-controls-pagecombo {padding: 0; display: block; overflow: hidden; margin: 0;}
+.graphic-controls-pagecombo{position: relative; padding: 4px 3px 2px 25px;}
+.graphic-controls-pagecombo select { display: none; }
+.graphic-controls-pagecombo input.input{border: 0 none; background: transparent; cursor: default; width: 100%;}
+.graphic-controls-pagecombo .handle{bottom: 0; left: 0; position: absolute; top: 0;}
+.graphic-controls-pagecombo .handle:before{padding: 7px 3px 0;]}

@@ -1,0 +1,34 @@
+#gxa-content{padding: 0;}
+
+#dashboard{width: 100%;}
+#dashboard td{padding: 0 0 20px; vertical-align: top;}
+#dashboard td header{margin: 0 0 20px; font-weight: bold;}
+
+#dashboard td.dash_info{width: 200px; border-[i18n:_align]: 1px solid #ddd;}
+
+#dashboard td.dash_items{padding: 40px 10px;}
+#dashboard td.dash_items ul{display: block; list-style: none; margin: 0; padding: 0;}
+#dashboard td.dash_items li{text-align: center;}
+#dashboard td.dash_items li a{display: block; color: #000; margin: 20px;}
+#dashboard td.dash_items li a:hover{color: #FFA800;}
+
+#dashboard td.dash_feeds{width: 300px; border-[i18n:align]: 1px solid #ddd; height: 590px;}
+#dashboard td.dash_feeds ul{margin: 0;}
+#dashboard td.dash_feeds li{margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dotted #888;}
+#dashboard td.dash_feeds li a{display: block;}
+#dashboard td.dash_feeds li a h5{color: #888;}
+#dashboard td.dash_feeds li a:hover h5{color: inherit;}
+
+.dash-icon{background-image: url("images/dashboard.png"); background-repeat: no-repeat; width: 64px; height: 64px; margin: 0 auto;}
+.dash-icon.content-write{background-position: 0 0;}
+.dash-icon.content-list{background-position: -64px 0;}
+.dash-icon.article-write{background-position: -128px 0;}
+.dash-icon.article-list{background-position: -192px 0;}
+.dash-icon.menu-list{background-position: -256px 0;}
+
+.dash-icon.settings{background-position: 0 -64px;}
+.dash-icon.plugins{background-position: -64px -64px;}
+.dash-icon.departments{background-position: -128px -64px;}
+.dash-icon.users{background-position: -192px -64px;}
+.dash-icon.groups{background-position: -256px -64px;}
+.dash-icon.rules{background-position: -320px -64px;}

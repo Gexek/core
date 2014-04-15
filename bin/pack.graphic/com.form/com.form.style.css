@@ -1,0 +1,55 @@
+.graphic-form {margin: 0.3em;}
+
+.graphic-form .gxui-spinner.hidden{display: none !important;}
+
+.graphic-form div.graphic-formsection{margin: 0 0 1px; border: 0;}
+.graphic-form div.graphic-formsection.expandable {}
+.graphic-form div.graphic-formsection.expandable .gxui-header {}
+.graphic-form div.graphic-formsection .gxui-header{font-size: 110%;}
+
+.graphic-form div.graphic-formsection .gxui-header .popup-handle{float: [i18n:_align]; cursor: pointer;}
+.graphic-form div.graphic-formsection .gxui-header .popup-handle .ui-icon{float: [i18n:_align];}
+
+.graphic-form div.graphic-formsection section{padding: 20px 5px; position: relative;}
+.graphic-form div.graphic-formsection section .gxui-overlay{z-index: 498; background: #ddd;}
+.graphic-form div.graphic-formsection.collapsed section{display: none;}
+
+.graphic-form div.graphic-formsection .fields{margin: 0; padding-[i18n:_align]: 20px;}
+
+.graphic-form div.graphic-formsection .gxui-grid > .gxui-float{margin: 0; padding: 0; padding-[i18n:align]: 15px;}
+.graphic-form div.graphic-formsection .gxui-grid > .gxui-float:first-child{padding-[i18n:align]: 0;}
+
+.graphic-form div.graphic-formsection .gxui-popup{width: 50%; min-width: 500px; padding: 10px 0 20px; height: 450px; overflow: auto;}
+.graphic-form div.graphic-formsection .gxui-popup div.fieldrow{margin: 10px 0 0;}
+
+.graphic-form div.graphic-formsection legend.splitter{margin: 30px 0px 20px;}
+.graphic-form div.graphic-formsection legend.splitter span{padding: 0px 0px 0px 0.5em;}
+.graphic-form div.graphic-formsection legend.splitter span:after{content: ":";}
+.graphic-form div.graphic-formsection legend.splitter div{margin: -12px 0px 0px; border-bottom: 1px solid #bababa;}
+
+/*----- Note -----*/
+.graphic-form div.graphic-formsection cite.note {
+   width: 30%; padding: 10px; margin: 0; margin-[i18n:align] 10px; padding-[i18n:align]: 20px;
+}
+.graphic-form div.graphic-formsection cite.note p{margin: 1em 0em 0em;}
+.graphic-form div.graphic-formsection cite.note p:first-child{margin: 0;}
+/*---------------*/
+
+.graphic-form div.graphic-formsection div.fieldrow{
+  clear: [i18n:align]; display: block; width: 100%; zoom: 1; margin: 1em 0 0; padding: 1px 3px;
+}
+.graphic-form div.graphic-formsection div.fieldrow:first-child{margin-top: 0;}
+.graphic-form div.graphic-formsection div.fieldrow label{width: 100%;}
+.graphic-form div.graphic-formsection div.fieldrow label.note{padding: 0 5px; font-style: italic; font-size: 0.8em;}
+.graphic-form div.graphic-formsection input,
+.graphic-form div.graphic-formsection textarea,
+.graphic-form div.graphic-formsection select{max-width: 100%; margin: 0;}
+.graphic-form div.graphic-formsection textarea{width: 70%; height: 100px;}
+
+.graphic-form div.graphic-formsection .gxui-grid>div{margin-top: 0;}
+.graphic-form div.graphic-formsection .gxui-grid .gxui-g20 .fieldrow{margin-top: 15px;}
+.graphic-form div.graphic-formsection .gxui-grid .gxui-g20 .gxui-control{min-width: 200px;max-width: 100%;width: 100%;}
+
+.graphic-form .gxui-footer{padding: 20px 10px;}
+.graphic-form .gxui-footer input{margin: 0 5px;}
+.graphic-form .gxui-footer .gxui-spinner{}

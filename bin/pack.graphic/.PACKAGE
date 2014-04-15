@@ -1,0 +1,146 @@
+<?php
+namespace Graphic;
+
+/**
+* MD5 of parseOptions() function to prevent name confliction
+* !! Don't use this function anywhere, it's name may change in the future without notification 
+*/
+function fe9b868990cffe6fa7cf765df33ac3e6($options, $wrap_brackets = true){
+    $string = array(); $start = ''; $end = '';
+    if(is_string($options)){
+        if(\ClientSide::js_call($options))
+            $string[] = $options;
+        else
+            $string[] = "\"$options\"";
+    } else if(is_bool($options)) $string[] = $options? 'true': 'false';
+    else if(is_numeric($options)) $string[] = $options;
+    else if(empty($options)) $string[] = 'null';
+    else {
+        if(is_object($options)){
+            $start = '{'; $end = '}';
+            $options = get_object_vars($options);
+        } else if(is_array($options)){
+            $start = '['; $end = ']';
+        }
+        $keys = array_keys($options);
+        if(!is_numeric($keys[0])){
+            $start = '{'; $end = '}';
+        }
+        foreach($keys as $key){
+            if(is_numeric($key))
+                $string[] = fe9b868990cffe6fa7cf765df33ac3e6($options[$key]);
+            else{
+                $string[] = '"'.$key.'":'.fe9b868990cffe6fa7cf765df33ac3e6($options[$key]);
+            }
+        }
+    }
+    $options = $start.implode(',', $string).$end;
+    return $wrap_brackets? $options: trim($options, '{}'); 
+}
+
+abstract class Graphic extends \ClientSide{
+    protected $id, $name, $events;
+    protected $ext_classes = array('this'=>array());
+    protected $styles = array();
+    protected $defualtOptions = array();
+    
+    public $options;
+    
+    public function __construct($name, $options = array()){
+        $this->name = str_replace(' ', '_', $name);
+        $this->id = $this->name;
+        
+        extend($options, $this->defualtOptions);
+        extend($options, array('visuality' => ''));
+        
+        $this->options = (object)$options;
+        $this->events = array();
+    }
+    
+    public function __get($var){return $this->$var;}
+
+    final public function addClass($class, $target = null){
+        $target = is_null($target)? strtolower(get_class($this)): $target;
+        if(!isset($this->ext_classes[$target]))
+            $this->ext_classes[$target] = array();
+        
+        if(!in_array($class, $this->ext_classes[$target]))
+            $this->ext_classes[$target][] = $class;
+    }
+    
+    final protected function getClass($target = null){
+        $class = is_null($target)? strtolower(get_class($this)): $target;
+        if(isset($this->ext_classes[$class]))
+            $class .= ' '.implode(' ', $this->ext_classes[$class]);
+        
+        foreach(preg_split('/\s/ ', $this->options->visuality, 0, PREG_SPLIT_NO_EMPTY) as $v){
+            if(($s = trim(substr($v, 0, 5))) == 'gxui-')
+                $v = $s;
+            $class .= ' gxui-'.$v;
+        }
+
+        return trim(str_replace('\\', '-', $class));
+    }
+    
+    final protected function getStyles(){
+        $styles = '';
+        foreach($this->styles as $n => $v)
+            $styles .= "$n: $v; ";
+        return trim($styles);
+    }
+    
+    final public function style($name, $value = 'get'){
+        if($value == 'get')
+            return $this->styles[$name];
+        else if(is_null($value))
+            unset($this->styles[$name]);
+        else
+            $this->styles[$name] = $value;
+    }
+    
+    final protected function unify($prefix = '', $suffix = ''){
+        return trim("$prefix id=\"$this->id\" name=\"$this->name\"".
+        " class=\"".$this->getClass()."\" style=\"".$this->getStyles()."\" $suffix");
+    }
+    
+    protected function parseOptions($options = null, $wrap_brackets = true){
+        $options = is_null($options)? $this->options: $options;
+        return fe9b868990cffe6fa7cf765df33ac3e6($options, $wrap_brackets);
+    }
+    
+    abstract public function __toString();
+}
+/*
+$__info__ = array(
+    'name' => 'Graphic',
+    'version' => '0.1.0',
+    'root' => dirname(__FILE__),
+    'classes' => array(
+        'panel' => new AClass('panel', '', 'Graphic.Tag'),
+        'label' => new AClass('label', ''),
+        'tag' => new AClass('tag', 'HTML Tags'),
+        'jqueryui' => new APackage('jqueryui', 'jQuery UI Class', 'libs/jquery/ui/jquery.ui.core.js,libs/jquery/ui/jquery.ui.widget.js'),
+        
+        'accordion' => new AClass('accordion', 'Accordion widget', 'Graphic.jQueryUI'),
+        'form' => new AClass('form', 'Ajax From', 'Graphic.Tag,Graphic.jQueryUI'),
+        'uploadform' => new AClass('uploadform', 'Ajax Upload From', 'Graphic.Form'),
+        'grid' => new AClass('grid', 'UI Grid', 'Data.Ajax,Graphic.jQueryUI,Graphic.DatePicker'),
+        'datepicker' => new AClass('datepicker', 'Date Picker', 'Graphic.jQueryUI,libs/jquery/ui/jquery.ui.mouse.js,Graphic.Slider'),
+        'button' => new AClass('button', 'jQuery UI Button', 'Graphic.jQueryUI'),
+        'radio' => new AClass('radio', 'jQuery UI Radio', 'Graphic.jQueryUI,Graphic.Button'),
+        
+        'treeview' => new AClass('treeview', 'jQuery Treeview'),
+        'vcascade' => new AClass('vcascade', 'Vertical Cascading'),
+        'hcascade' => new AClass('hcascade', 'Horizontal Cascading'),
+        'filetree' => new AClass('filetree', 'File Treeview'),
+        
+        'dialog' => new AClass('dialog', 'Dialog Class', 'Graphic.Button,libs/jquery/ui/jquery.ui.mouse.js,libs/jquery/ui/jquery.ui.position.js,libs/jquery/ui/jquery.ui.draggable.js,libs/jquery/ui/jquery.ui.resizable.js')
+    ),
+    'packages' => array(
+        'controls' => new APackage('controls', 'Controls Package', 'Graphic.Label'),
+        'editors' => new APackage('editors', 'Editors Package'),
+        'dialogs' => new APackage('dialogs', 'Dialogs Package', 'Graphic.jQueryUI'),
+        'gx' => new APackage('gx', 'Graphical Components Package for GX Engine ')
+    )
+);*/
+?>

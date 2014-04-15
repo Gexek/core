@@ -1,0 +1,14 @@
+.graphic-dropdown{list-style: none; padding: 0; margin: 0; z-index: 998;}
+.graphic-dropdown ul{list-style: none; padding: 0; margin: 0; white-space: nowrap; position: absolute; display: none; z-index: 997;}
+.graphic-dropdown li{padding: 0; position: relative; cursor: pointer; margin: 0;}
+.graphic-dropdown li.splitter{margin: 0; width: 0; height: 0;}
+.graphic-dropdown li>a{display: block; text-align: [i18n:align];}
+.graphic-dropdown li>ul{top: -1px; [i18n:align]: 99%;}
+.graphic-dropdown>li{margin: 0 1.5em;}
+.graphic-dropdown>li>a{font-size: 1.2em; font-weight: bold;}
+.graphic-dropdown>li>ul{top: 100%; [i18n:align]: 0;}
+.graphic-dropdown>li>a{text-align: center;}
+
+/* Fix IE. Hide from IE Mac */ 
+* html .graphic-dropdown li{height: 1%;} 
+* html .graphic-dropdown li a{height: 1%;} 

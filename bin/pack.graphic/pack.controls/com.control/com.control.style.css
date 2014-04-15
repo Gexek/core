@@ -1,0 +1,4 @@
+.gxui-control{width: 100%;}
+.graphic-form .gxui-control>textarea.graphic-ui-controls-textarea,
+.graphic-form .gxui-control>input.graphic-ui-controls-textbox,
+.graphic-form .gxui-control>input.graphic-ui-controls-combobox{margin: 0; padding: 0;}

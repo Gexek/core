@@ -1,0 +1,7 @@
+.graphic-grid .grid-caption div.icon span.ui-icon {margin-bottom: -0.2em;}
+.graphic-grid .grid-caption div.icon span.label {font: 11px Tahoma;}
+
+.graphic-grid .grid-status .total{font-size: 13px;}
+
+.graphic-grid .grid-tbody td select,
+.graphic-grid .grid-tbody td input{font: italic 12px Tahoma;}

@@ -1,0 +1,12 @@
+.graphic-drilldown{list-style: none; padding: 0; margin: 0; z-index: 998;}
+.graphic-drilldown ul{list-style: none; padding: 0; margin: 0; white-space: nowrap; position: absolute; display: none; z-index: 997;}
+.graphic-drilldown li{padding: 0; position: relative; cursor: pointer; margin: 0;}
+.graphic-drilldown li.splitter{margin: 0; width: 0; height: 0;}
+.graphic-drilldown li>a{display: block; text-align: [i18n:align];}
+.graphic-drilldown li>ul{top: 5px; [i18n:align]: 99%;}
+.graphic-drilldown>li{margin: 0 1.5em;}
+.graphic-drilldown>li>a{font-size: 1.2em; font-weight: bold;}
+
+/* Fix IE. Hide from IE Mac */ 
+* html .graphic-drilldown li{height: 1%;} 
+* html .graphic-drilldown li a{height: 1%;} 

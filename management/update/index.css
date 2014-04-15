@@ -1,0 +1,59 @@
+#gxa-content {padding: 0 0 38px;}
+
+#update-wizard{width: 100%; height: 100%;}
+
+#wizard-anchor{float:[i18n:align]; width: 30%; border-left: 1px solid #D2D2D2;}
+#wizard-anchor ul{list-style: none; margin:0; padding:0;} 
+#wizard-anchor li{margin:0 0 20px; padding:0;} 
+#wizard-anchor li:before{float: right; margin: 2px 0 12px 7px;}
+#wizard-anchor li b{display: block; color: #aaa;}
+#wizard-anchor li span{display: block; color: #bbb;}
+#wizard-anchor li.active b{color: #333;} 
+#wizard-anchor li.active span{color: #666;}
+
+#wizard-body, #wizard-anchor{height: 100%; padding: 5em; display:block;  margin:0; overflow: auto;}
+
+#wizard-body{float:[i18n:_align]; width: 70%; }
+
+
+#wizard-buttons{text-align: center;}
+#wizard-buttons > span{margin: 50px 0 0; margin-[i18n:align]: 20px; display: none; float: [i18n:align];}
+
+.status_img {clear: both; display: block; margin: 0 auto;}
+#spinner_connect{margin: -64px auto 0; position: relative; text-align: center; top: 50%;}
+#spinner_connect img{margin-bottom: 10px;}
+
+#updates_checkall{float: right;}
+.available_updates_header{margin: 0 0 0.5em !important;}
+
+#available_packages{list-style: none;}
+#available_packages ul{list-style: none; display: none;}
+#available_packages li{cursor: pointer; margin: 0 0 0.2em;}
+#available_packages label{cursor: pointer; font-weight: normal; color: #000;}
+#available_packages label.size{direction: ltr; float: [i18n:_align];}
+#available_packages li .gxui-spinner{float: [i18n:align]; margin: 3px 0 0; margin-[i18n:_align]: 5px;}
+#available_packages li > .icon{float: [i18n:align]; height: 16px; margin: 0; margin-[i18n:_align]: 5px; width: 16px;}
+#available_packages li > .icon-ok{color: #54CF53;}
+#available_packages li > .icon-cancel{color: #CF5353;}
+#available_packages li > .gxui-spinner, 
+#available_packages li > .icon,
+#available_packages li > input{display: none;}
+#available_packages li.checking > input{display: inline;}
+#available_packages li.spinning > .gxui-spinner{display: block;}
+#available_packages li.done > .icon-ok{display: block;}
+#available_packages li.failed > .icon-cancel{display: block;}
+
+#available_packages > li{font-size: 1.2em;}
+#available_packages > li > label.name{}
+
+#available_packages ul.patches{}
+#available_packages ul.patches label{color: #555;}
+#available_packages ul.patches > li{font-size: 0.9em;}
+#available_packages ul.patches > li > label.date{}
+
+#available_packages ul.changes{font-size: 0.9em; padding: 0;}
+#available_packages ul.changes > li{}
+#available_packages ul.changes > li > label.type{float: right; font-weight: bold; text-align: left; width: 7em;}
+#available_packages ul.changes > li > label.type:after{content: ":"; padding: 0 4px;}
+
+img.cache-image{visibility: hidden; position: absolute;}

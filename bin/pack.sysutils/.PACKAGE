@@ -1,0 +1,21 @@
+<?php
+namespace SysUtils;
+
+abstract class SysUtil extends \ServerSide {}
+/*
+$__info__ = array(
+    'name' => 'SysUtils',
+    'version' => '0.1.0',
+    'root' => dirname(__FILE__),
+    'classes' => array(
+        'settings' => new AClass('settings', 'System Settings', 'Data.DB.Connection'),
+        'security' => new AClass('security', 'System Firewall', 'Utils.Hash,Utils.Cryptor,SysUtils.Settings'),
+        'firewall' => new AClass('firewall', 'System Firewall', 'SysUtils.Security'),
+        'datamodule' => new AClass('datamodule', 'Data Module', 'Data.DB.Connection'),
+        'i18n' => new AClass('i18n', 'Internationalization class'),
+        'gxutils' => new AClass('gxutils', 'GX Utilities'),
+        'administration' => new AClass('administration', 'Administration tools class')
+    ),
+    'packages' => array()
+);*/
+?>

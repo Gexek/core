@@ -1,0 +1,78 @@
+.fw-object{display: block; clear: both; padding: 0 10px; -moz-user-select: none; user-select: none; -webkit-user-select: none;}
+.fw-object .icon{display: inline-block; width: 16px; height: 16px; margin: 0 0 -3px 7px;}
+
+.fw-object.all .icon{background: none;}
+.fw-object.page .icon{background-position: -144px -100px;}
+.fw-object.website .icon{background-position: 0 -100px;}
+.fw-object.admin .icon{background-position: -16px -100px;}
+.fw-object.security .icon{background-position: -32px -100px;}
+.fw-object.plugin .icon{background-position: -48px -100px;}
+.fw-object.user .icon{background-position: -96px -100px;}
+.fw-object.group .icon{background-position: -112px -100px;}
+.fw-object.unauth .icon{background-position: -128px -100px;}
+.fw-object.allow .icon{background-position: -64px -100px;}
+.fw-object.deny .icon{background-position: -80px -100px;}
+
+.fw-object.page{overflow: hidden; margin: 0 0 7px;}
+.fw-object.page .icon{float: right;}
+.fw-object.page label{display: block;}
+.fw-object.page label.url{direction: ltr; margin: -3px 22px 0 0;}
+.fw-object.page label.title{color: #000000;}
+
+#gx-rules{}
+    
+#gx-rules .gxui-header{overflow: hidden; padding: 7px 10px;}
+#gx-rules .gxui-header > div{float: [i18n:_align]; background: #888; padding: 3px; margin: 5px 2px; cursor: pointer;}
+#gx-rules .gxui-header > div.gxui-hover{background: #aaa;}
+
+#gx-rules > table{width: 100%; border-right: 1px inset #ccc; border-top: 1px inset #ccc; border-top: 0; border-spacing: 0; table-layout: fixed;}
+
+#gx-rules > table th, #gx-rules > table td{
+    padding: 5px 10px; text-align: [i18n:align]; border-left: 1px solid #DEDEDE; border-bottom: 1px solid #DEDEDE; cursor: default;
+    -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; -o-user-select: none; user-select: none;
+}
+
+#gx-rules > table th.move{width: 40px;}
+#gx-rules > table th.name{width: 200px;}
+#gx-rules > table th.type{width: 130px;}
+#gx-rules > table th.applicants{width: 200px;}
+#gx-rules > table th.manage{width: 170px;}
+
+#gx-rules > table td{vertical-align: top; padding: 15px;}
+#gx-rules > table td.gxui-hover{background: #ffffd2;}
+
+#gx-rules > table td.move{text-align: center;}
+#gx-rules > table td.move > div{background: #ccc; cursor: pointer;}
+#gx-rules > table td.move > div.gxui-hover{background: #eee;}
+
+#gx-rules > table td.name{font-weight: bold;}
+
+#gx-rules > table tr.odd{background: #F8F8F8;}
+#gx-rules > table tr.pair{}
+#gx-rules > table tr.default td{color: #888888; background: #EEEEEE;}
+#gx-rules > table tr.default td.hover{background: transparent;}
+#gx-rules > table tr.gxui-selected{background: #D2E8FF;}
+#gx-rules > table td.gxui-hover{background: #ffffd2;}
+
+
+
+.fw-dialog{width: 100%; height: 100%; display: none;}
+.fw-dialog section{float: right; margin: 0; height: 400px;}
+.fw-dialog section.list{width: 50%;}
+.fw-dialog section.list .fw-object.sub{padding-right: 30px;}
+.fw-dialog section.result{border-right: 1px solid #ccc; width: 50%;}
+
+.fw-dialog section > h5{margin: 0 0 20px;}
+
+.fw-dialog section > div{margin: 0;}
+.fw-dialog section > div.obj-cats{}
+.fw-dialog section > div.obj-list{}
+
+.fw-dialog section > div .fw-object, .fw-dialog section > div .fw-object label{cursor: pointer;}
+.fw-dialog section > div .fw-object.gxui-hover{background: #F8F9FF;}
+
+
+
+
+

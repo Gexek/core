@@ -1,0 +1,3 @@
+.gxui-control[type=tinymce]{width: 100%; max-width: none;}
+.graphic-editors-tinymce{padding: 0; margin: 0;}
+.graphic-editors-tinymce textarea{display: none;}

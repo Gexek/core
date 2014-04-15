@@ -1,0 +1,31 @@
+<?php
+class Includable extends System {
+    protected $name, $desc, $requires;
+    
+    public function __construct($name, $desc, $requires = null){
+        $this->name = $name;
+        $this->desc = $desc;
+        $this->requires = preg_split('/[,;]/', $requires, -1, PREG_SPLIT_NO_EMPTY);
+    }
+    
+    public function __get($var){return $this->$var;}
+}
+
+class AClass extends Includable {}
+class APackage extends Includable{}
+
+$__info__ = array(
+    'name' => 'System',
+    'version' => '0.1.0',
+    'root' => dirname(__FILE__),
+    'classes' => array(
+        
+    ),
+    'packages' => array(
+        'data' => new APackage('data', 'Data Cummunication Package'),
+        'sysutils' => new APackage('sysutils', 'System Utilities'),
+        'utils' => new APackage('utils', 'Common Utilities'),
+        'graphic' => new APackage('graphic', '')
+    )
+);
+?>
