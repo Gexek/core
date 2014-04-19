@@ -71,8 +71,14 @@ class GridConnector {
             
             if(!is_null($this->order))
                 $sql[] = 'ORDER BY '.$this->order;
-                
-            $dataset = $DB->query(implode(' ', $sql))->fetchAll(\PDO::FETCH_OBJ);
+            
+            $rs = $DB->query(implode(' ', $sql));
+            if($rs)
+            	$dataset = $rs->fetchAll(\PDO::FETCH_OBJ);
+            else{
+            	$error_info = $DB->errorInfo();
+            	die($error_info[2]);
+            }
         } else 
         	$dataset = $DB->query($this->sql)->fetchAll(\PDO::FETCH_OBJ);
         
