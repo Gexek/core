@@ -80,7 +80,7 @@ function download(){
 	curl_setopt($ch, CURLOPT_POSTFIELDS, getData($_POST->id, $_POST->type));
 	curl_setopt($ch, CURLOPT_TIMEOUT, 50);
 	curl_setopt($ch, CURLOPT_FILE, $fp);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	//curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_exec($ch);
 	
 	$info = curl_getinfo($ch);
